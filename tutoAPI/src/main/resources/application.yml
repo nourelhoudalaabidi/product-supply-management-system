@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/myDB   # change mydb -> your database
+    username: postgres                              # change to your DB user
+    password: postgres                          # change to your DB password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update                            # validate, update, create-drop, none
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+server:
+  port: 8080
+# ...existing code...
+
+
